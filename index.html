@@ -104,34 +104,6 @@ footer{border-top:1px solid var(--line);padding:27px 0;color:#7f858f;font-size:1
 @media(prefers-reduced-motion:reduce){.hero,.art .orbit,.art .block,.art .float,.ticker-in,.hero-actions .button,.cta-card .button,.section-top h2,.center h2{animation:none!important}}
 
 
-/* PIKA RED LIGHTNING MASCOT */
-@keyframes pikaRedFlash{
-  0%,100%{opacity:.15;filter:drop-shadow(0 0 3px #ff1717);transform:scale(.92) rotate(-5deg)}
-  12%,26%,58%{opacity:1;filter:drop-shadow(0 0 15px #ff1717) drop-shadow(0 0 28px #ff3030);transform:scale(1.05) rotate(3deg)}
-  18%,64%{opacity:.35}
-}
-.pikachu-mascot{
-  filter:hue-rotate(300deg) saturate(2.25) contrast(1.08)
-    drop-shadow(0 18px 24px #000b) drop-shadow(0 0 24px #ff202080);
-}
-.art:before,.art:after{
-  content:"";position:absolute;z-index:3;pointer-events:none;
-  width:58px;height:150px;opacity:.85;
-  background:linear-gradient(180deg,#ffb0a8 0%,#ff2525 38%,#a80012 100%);
-  clip-path:polygon(48% 0,100% 0,63% 39%,94% 39%,18% 100%,36% 53%,0 53%);
-  filter:drop-shadow(0 0 12px #ff1515);
-  animation:pikaRedFlash 1.8s steps(2,end) infinite;
-}
-.art:before{left:12%;top:29%;rotate:-18deg}
-.art:after{right:12%;top:35%;rotate:18deg;animation-delay:.55s}
-@media(max-width:650px){
-  .art:before{left:8%;top:28%;scale:.72}
-  .art:after{right:8%;top:34%;scale:.72}
-}
-@media(prefers-reduced-motion:reduce){
-  .art:before,.art:after{animation:none;opacity:.65}
-}
-
 </style>
 </head>
 <body>
