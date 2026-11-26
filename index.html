@@ -111,25 +111,10 @@ footer{border-top:1px solid var(--line);padding:27px 0;color:#7f858f;font-size:1
 @media(max-width:650px){.pikachu-bg{opacity:.32}.pika-run{width:64px;height:64px}.pika-run-two{width:54px}.pika-run-three{width:44px}}
 @media(prefers-reduced-motion:reduce){.pikachu-bg{display:none}}
 
-/* FULL-SITE PIKACHU ELECTRIC BACKGROUND */
-.pikachu-bg{z-index:15}
-.pika-zap{position:absolute;inset:-8vh -5vw;pointer-events:none;opacity:0;mix-blend-mode:screen;filter:drop-shadow(0 0 12px #ffe34d) drop-shadow(0 0 30px #ffb300)}
-.pika-zap::before,.pika-zap::after{content:"";position:absolute;top:-10%;height:120%;width:24vw;min-width:150px;background:linear-gradient(180deg,transparent 0%,#fff9a8 12%,#ffe33d 30%,#ffb300 54%,#fff5a6 76%,transparent 100%);clip-path:polygon(54% 0,34% 34%,58% 34%,18% 73%,42% 73%,27% 100%,73% 62%,51% 62%,83% 25%,59% 25%);filter:blur(.4px)}
-.pika-zap::after{width:12vw;min-width:85px;opacity:.7;filter:blur(8px);left:4vw}
-.pika-zap-one{animation:pikaLightning 5.8s infinite;transform:rotate(9deg)}
-.pika-zap-one::before{left:12vw}
-.pika-zap-two{animation:pikaLightning 7.4s 2.1s infinite;transform:rotate(-17deg) scale(.8)}
-.pika-zap-two::before{right:8vw;left:auto;top:4%;height:90%}
-.pika-zap-three{animation:pikaLightning 6.6s 4.2s infinite;transform:rotate(22deg) scale(.68)}
-.pika-zap-three::before{left:48vw;top:8%;height:85%}
-@keyframes pikaLightning{0%,84%,87%,100%{opacity:0}84.5%{opacity:.95}85%{opacity:.18}85.5%{opacity:1}86.5%{opacity:.08}}
-@media(max-width:650px){.pika-zap::before{width:42vw;min-width:110px}.pika-zap::after{width:25vw}.pika-zap-two{transform:rotate(-17deg) scale(.65)}.pika-zap-three{transform:rotate(22deg) scale(.58)}}
-@media(prefers-reduced-motion:reduce){.pika-zap{display:none}}
-
 </style>
 </head>
 <body>
-<div class="pikachu-bg" aria-hidden="true"><i class="pika-zap pika-zap-one"></i><i class="pika-zap pika-zap-two"></i><i class="pika-zap pika-zap-three"></i><img class="pika-run pika-run-one" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt=""><img class="pika-run pika-run-two" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt=""><img class="pika-run pika-run-three" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt=""></div>
+<div class="pikachu-bg" aria-hidden="true"><img class="pika-run pika-run-one" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt=""><img class="pika-run pika-run-two" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt=""><img class="pika-run pika-run-three" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt=""></div>
 <div class="topline"></div>
 <header><div class="shell nav"><a class="logo" href="#home"><span class="mark">P</span> PIKA <em>HOSTING</em></a><nav class="navlinks" id="navlinks"><a href="#features">WHY PIKA</a><a href="#plans">PLANS</a><a href="#about">ABOUT</a><a href="#faq">FAQ</a></nav><a class="navcta" href="https://discord.gg/QDapUdtVH" target="_blank" rel="noopener">JOIN DISCORD ↗</a><button class="hamb" id="hamb" aria-label="Toggle navigation">☰</button></div></header>
 <main>
