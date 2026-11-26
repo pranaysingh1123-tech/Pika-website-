@@ -1,0 +1,36 @@
+name: Deploy PIKA Website
+
+on:
+  push:
+    branches:
+      - pika-redesign
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy to PIKA VPS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Load VPS SSH key
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+
+      - name: Trust VPS host key
+        env:
+          VPS_KNOWN_HOSTS: ${{ secrets.VPS_KNOWN_HOSTS }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$VPS_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Update website on VPS
+        run: |
+          ssh -p 22 -o BatchMode=yes root@4.186.148.64 'set -eu
+            git -C /tmp/pika-website fetch origin pika-redesign
+            git -C /tmp/pika-website reset --hard origin/pika-redesign
+            install -o www-data -g www-data -m 0644 /tmp/pika-website/index.html /var/www/html/index.html
+          '
