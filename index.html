@@ -104,9 +104,22 @@ footer{border-top:1px solid var(--line);padding:27px 0;color:#7f858f;font-size:1
 @media(prefers-reduced-motion:reduce){.hero,.art .orbit,.art .block,.art .float,.ticker-in,.hero-actions .button,.cta-card .button,.section-top h2,.center h2{animation:none!important}}
 
 
+
+/* LIVE PIKACHU BACKGROUND — subtle roaming mascots */
+.pikachu-bg{position:fixed;inset:0;z-index:15;overflow:hidden;pointer-events:none;opacity:.23;mix-blend-mode:screen}
+.pika-run{position:absolute;width:68px;height:68px;object-fit:contain;filter:drop-shadow(0 0 12px #ffcf35);will-change:transform}
+@keyframes pikaRoamOne{0%{transform:translate(-12vw,18vh) rotate(-12deg)}25%{transform:translate(28vw,34vh) rotate(12deg)}50%{transform:translate(58vw,15vh) rotate(-8deg)}75%{transform:translate(82vw,48vh) rotate(10deg)}100%{transform:translate(112vw,22vh) rotate(-12deg)}}
+@keyframes pikaRoamTwo{0%{transform:translate(108vw,68vh) scaleX(-1) rotate(8deg)}50%{transform:translate(48vw,78vh) scaleX(-1) rotate(-10deg)}100%{transform:translate(-12vw,60vh) scaleX(-1) rotate(8deg)}}
+@keyframes pikaRoamThree{0%{transform:translate(12vw,105vh) rotate(8deg)}50%{transform:translate(76vw,52vh) rotate(-12deg)}100%{transform:translate(22vw,-15vh) rotate(8deg)}}
+.pika-run-one{top:0;left:0;animation:pikaRoamOne 34s linear infinite}
+.pika-run-two{top:0;left:0;width:54px;animation:pikaRoamTwo 42s linear infinite 4s}
+.pika-run-three{top:0;left:0;width:46px;animation:pikaRoamThree 38s linear infinite 9s}
+@media(max-width:650px){.pikachu-bg{opacity:.16}.pika-run{width:48px;height:48px}.pika-run-two{width:40px}.pika-run-three{width:34px}}
+@media(prefers-reduced-motion:reduce){.pikachu-bg{display:none}}
 </style>
 </head>
 <body>
+<div class="pikachu-bg" aria-hidden="true"><img class="pika-run pika-run-one" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt=""><img class="pika-run pika-run-two" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt=""><img class="pika-run pika-run-three" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt=""></div>
 <div class="topline"></div>
 <header><div class="shell nav"><a class="logo" href="#home"><span class="mark">P</span> PIKA <em>HOSTING</em></a><nav class="navlinks" id="navlinks"><a href="#features">WHY PIKA</a><a href="#plans">PLANS</a><a href="#about">ABOUT</a><a href="#faq">FAQ</a></nav><a class="navcta" href="https://discord.gg/QDapUdtVH" target="_blank" rel="noopener">JOIN DISCORD ↗</a><button class="hamb" id="hamb" aria-label="Toggle navigation">☰</button></div></header>
 <main>
