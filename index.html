@@ -55,16 +55,22 @@ header,main,footer{position:relative;z-index:1}
 <section class="cta"><div class="wrap"><div class="cta-box"><div class="kicker">READY WHEN YOU ARE</div><h2>Let's build your next world.</h2><p>Have a question or need help picking a plan? Join the PIKA Hosting community and talk to us.</p><a class="btn" href="https://discord.gg/QDapUdtVH" target="_blank" rel="noopener">Join PIKA Discord ↗</a></div></div></section>
 <section id="faq"><div class="wrap"><div class="heading"><div class="kicker">QUICK ANSWERS</div><h2>Frequently asked questions</h2></div><div class="faq"><article><h3>What can I host with PIKA?</h3><p>PIKA Hosting focuses on Minecraft server hosting. Contact us to confirm currently available editions and configurations.</p></article><article><h3>What is included in each plan?</h3><p>Each plan lists its RAM, storage allocation, AMD EPYC 9V74 processor and DDoS mitigation details above. DDoS coverage is subject to upstream provider limits.</p></article><article><h3>Can you help me choose a plan?</h3><p>Yes. Tell us how many players you expect and what kind of server you want, and our team can help you find a suitable option.</p></article></div></div></section>
 
-<div class="pika-mascot" aria-label="Animated PIKA electric mascot" role="img">
+<div class="pika-mascot" aria-label="Animated Pikachu" role="img">
 <svg viewBox="0 0 100 112" xmlns="http://www.w3.org/2000/svg">
-<path class="spark" d="M13 42 5 32 16 28 10 17"/><path class="spark s2" d="M83 25 94 18 88 35 98 39"/>
-<path d="M31 29 24 5 43 19 57 19 76 5 72 32" fill="#ffd84a" stroke="#b87913" stroke-width="3" stroke-linejoin="round"/>
-<path d="M22 45 Q22 24 50 24 Q78 24 78 48 L74 79 Q70 96 50 98 Q30 96 26 79Z" fill="#ffcf38" stroke="#b87913" stroke-width="3"/>
-<path d="M29 12 34 24 39 20Z M65 20 70 12 68 25Z" fill="#34251c"/>
-<ellipse cx="38" cy="54" rx="4" ry="6" fill="#28202a"/><ellipse cx="62" cy="54" rx="4" ry="6" fill="#28202a"/>
-<circle cx="27" cy="67" r="6" fill="#ff5b62"/><circle cx="73" cy="67" r="6" fill="#ff5b62"/>
-<path d="M45 68 Q50 73 55 68" fill="none" stroke="#7a3b20" stroke-width="2.5" stroke-linecap="round"/>
-<path d="M75 82 89 76 83 91 96 96 77 104 81 91 69 93Z" fill="#ffcf38" stroke="#b87913" stroke-width="2.5" stroke-linejoin="round"/>
+<path class="spark" d="M12 43 4 32 16 28 10 16"/><path class="spark s2" d="M84 27 96 18 89 36 99 41"/>
+<!-- Pikachu's long black-tipped ears -->
+<path d="M29 39 18 2 Q16 -2 21 2 L43 28 57 28 79 2 Q84 -2 82 4 L71 40" fill="#ffd83d" stroke="#9d6817" stroke-width="2.8" stroke-linejoin="round"/>
+<path d="M18 2 31 22 23 25Z M82 3 68 23 77 26Z" fill="#302321"/>
+<!-- rounded body and head -->
+<path d="M20 48 Q17 24 50 22 Q83 24 80 50 L76 79 Q72 101 50 103 Q28 101 24 79Z" fill="#ffdc42" stroke="#a96f17" stroke-width="2.8"/>
+<path d="M29 78 Q18 88 25 94 Q35 99 43 94 L50 100 57 94 Q67 99 76 94 Q82 86 71 78" fill="#f4c32e" opacity=".7"/>
+<!-- eyes, cheeks, nose and smile -->
+<ellipse cx="37" cy="52" rx="4" ry="6" fill="#25202a"/><ellipse cx="63" cy="52" rx="4" ry="6" fill="#25202a"/>
+<circle cx="26" cy="68" r="8" fill="#f04c4d"/><circle cx="74" cy="68" r="8" fill="#f04c4d"/>
+<path d="M48 61 52 61 50 64Z" fill="#6b3b20"/>
+<path d="M43 68 Q50 78 57 68" fill="none" stroke="#75401d" stroke-width="2.4" stroke-linecap="round"/>
+<!-- iconic lightning-bolt tail -->
+<path d="M75 81 88 76 83 88 97 91 77 109 81 94 68 96Z" fill="#ffdc42" stroke="#a96f17" stroke-width="2.8" stroke-linejoin="round"/>
 </svg></div>
 </main><footer><div class="wrap foot"><div><strong>PIKA HOSTING</strong><br>© <span id="year"></span> PIKA Hosting. All rights reserved.</div><div class="footlinks"><a href="#home">Home</a><a href="#plans">Plans</a><a href="https://discord.gg/QDapUdtVH" target="_blank" rel="noopener">Discord</a></div></div></footer>
 <script>const menu=document.getElementById('menu'),links=document.getElementById('links');menu.addEventListener('click',()=>links.classList.toggle('show'));links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('show')));document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('.plan').forEach(plan=>plan.addEventListener('click',event=>{if(event.target.closest('a'))return;plan.classList.toggle('selected')}));</script>
